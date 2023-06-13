@@ -4,17 +4,46 @@
 }
 
 <h2>Education</h2>
- 
-    @foreach(var education in ViewBag.Education)
-    {
-                <ul>
-                    <li>
-                        @education.Degree
-                    </li>
-                    <ul>
-                        <li>@education.Institution</li>
-                        <li>@education.Year</li>
-                    </ul>
-                </ul>
-            }
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/Portfolio/">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/Portfolio/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Portfolio/Profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Portfolio/Education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Portfolio/Projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Portfolio/Reference">References</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+@foreach (var education in ViewBag.Education)
+{
+    <ul>
+        <li>
+            @education.Degree
+        </li>
+        <ul>
+            <li>@education.Institution</li>
+            <li>@education.Year</li>
+        </ul>
+    </ul>
+}
 

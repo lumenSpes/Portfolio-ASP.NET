@@ -57,7 +57,28 @@ namespace Portfolio.Controllers
 
         public ActionResult Projects()
         {
-            return View();
+            MyProjects[] myProjects = new MyProjects[]
+            {
+                new MyProjects
+                {
+                    Serial = 1, Course = "OOP1", Description = "Library Management System"
+                },
+                new MyProjects
+                {
+                    Serial = 2, Course = "OOP2", Description = "Car rental system"
+                },
+                new MyProjects
+                {
+                    Serial = 3, Course = "Web Technologies", Description = "Hospital Management System"
+                },
+                new MyProjects
+                { 
+                    Serial = 4, Course = "Advanced Programming With Java", Description = "Catering Management System"
+                }
+            };
+
+
+            return View(myProjects);
         }
         public ActionResult Reference()
         {
